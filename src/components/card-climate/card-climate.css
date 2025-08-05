@@ -1,0 +1,9 @@
+.card-climate-container{
+    display: grid;
+    margin-left: 50px;
+    justify-content: center;
+    width: 260px;
+    height: 100px;
+    border-radius: 10px;
+    background: linear-gradient(0.25turn, #536976, #292E49);
+}

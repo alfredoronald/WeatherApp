@@ -1,0 +1,19 @@
+.weather-container {
+  display: grid;
+  margin-top: -34px;
+  padding: 0;
+  width: 400px;
+  height: 104.5vh;
+  background-image: url('src/assets/sunday.svg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.weather-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

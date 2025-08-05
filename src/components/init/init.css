@@ -1,0 +1,9 @@
+.container-intro {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(0.25turn, #536976, #292e49);
+  height: 100vh;
+}

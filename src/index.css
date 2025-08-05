@@ -1,0 +1,17 @@
+:root {
+  margin: 0;
+  --color-primary: #3498db;
+  --color-secondary: #2ecc71;
+  --color-background: #f5f5f5;
+  --color-text: #222;
+}
+
+body {
+  background: linear-gradient(0.25turn, #292e49, #a2a1a1, #292e49);
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+}

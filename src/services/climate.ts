@@ -15,7 +15,8 @@ export async function getClimate() {
     //   description: first.weather[0].description,
     //   icon: first.weather[0].icon
     // };
-    return data;
+    const daily = data.list.filter(item => item.dt_txt.includes("12:00:00"));
+    return daily;
   } catch (error) {
     console.error('There has been a problem with your fetch operation:', error);
     return null;

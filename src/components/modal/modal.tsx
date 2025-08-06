@@ -5,6 +5,8 @@ import Card from '../card/card';
 import './modal.css';
 
 const Modal = () => {
+  const [showModal, setShowModal] = useState(true);
+
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -37,7 +39,10 @@ const Modal = () => {
     }
   };
   return (
-    <div className="modal-container">
+    <div className={`modal-container${!showModal ? ' hidden' : ''}`}>
+      <div onClick={() => setShowModal(!showModal)} className="modal-button">
+        {showModal ? <img src="/src/assets/arrowdown.svg"/> : <img src="/src/assets/arrowup.svg"/>}
+      </div>
       <nav className="modal-nav">
         <ul className="nav-list">
           <li className="nav-links">Hoy</li>
@@ -62,6 +67,14 @@ const Modal = () => {
         <Card />
         <Card />
         <Card />
+      </div>
+      <div className="weather-details">
+        <span>max: 26°</span>
+        <span>min: 19°</span>
+      </div>
+      <div className="weather-details">
+        <span>Viento: 16km-h</span>
+        <span>Humedad: 66%</span>
       </div>
     </div>
   );

@@ -1,9 +1,33 @@
 .card-climate-container{
-    display: grid;
-    margin-left: 50px;
+    display: flex;
+    margin: 0 auto;
     justify-content: center;
-    width: 260px;
-    height: 100px;
+    width: 250px;
+    height: 90px;
     border-radius: 10px;
     background: linear-gradient(0.25turn, #536976, #292E49);
+}
+.card-climate {
+    display: flex;
+    gap: 16px;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.card-climate-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+    row-gap: 10px;
+}
+.card-climate-number{
+    display: flex;
+    font-size: 56px;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }

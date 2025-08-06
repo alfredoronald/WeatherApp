@@ -1,17 +1,16 @@
 .modal-container {
   display: grid;
-  width: 360px;
   flex-direction: column;
-  position: fixed;
-  justify-content: center;
   background-color: #1f1f1f;
   border-radius: 20px 20px 0 0;
-  align-items: center;
+  transition: max-height 0.5s ease;
+  max-height: 420px;
+  overflow: hidden;
 }
 
 .modal-nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px;
   border-radius: 20px;
 }
@@ -43,4 +42,23 @@
 }
 .card-list::-webkit-scrollbar {
   display: none; /* Chrome, Safari y Opera */
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin: 0 40px;
+  color: #fff;
+}´
+
+.modal-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.modal-container.hidden {
+  max-height: 40px; /* Ajusta según el alto del botón */
+  overflow: hidden;
 }

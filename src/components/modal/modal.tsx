@@ -41,7 +41,7 @@ const Modal = () => {
   return (
     <div className={`modal-container${!showModal ? ' hidden' : ''}`}>
       <div onClick={() => setShowModal(!showModal)} className="modal-button">
-        {showModal ? <img src="/src/assets/arrowdown.svg"/> : <img src="/src/assets/arrowup.svg"/>}
+        {showModal ? <img src="/src/assets/icons/arrowdown.svg"/> : <img src="/src/assets/icons/arrowup.svg"/>}
       </div>
       <nav className="modal-nav">
         <ul className="nav-list">

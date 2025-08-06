@@ -4,7 +4,7 @@
   padding: 0;
   width: 400px;
   height: 104.6vh;
-  background-image: url('src/assets/sunday.svg');
+  background-image: url('src/assets/backgrounds/sunday.svg');
   background-size: cover;
   background-position: center;
   z-index: 1;

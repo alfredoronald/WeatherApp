@@ -12,7 +12,7 @@ const InitialPage = () => {
     <div id="loading-screen" className="container-intro">
       <h1>Weather App</h1>
       <img
-        src="/src/assets/intro.svg"
+        src="/src/assets/backgrounds/intro.svg"
         alt="Imagen de Inicio"
         onClick={handleClick}
         style={{ cursor: 'pointer' }}

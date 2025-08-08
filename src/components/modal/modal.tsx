@@ -45,10 +45,10 @@ const Modal = () => {
       </div>
       <nav className="modal-nav">
         <ul className="nav-list">
-          <li className="nav-links">Hoy</li>
-          <li className="nav-links">Mañana</li>
-          <li className="nav-links">Semana</li>
-          <li className="nav-links">Siguiente Semana</li>
+          <a href="/" className="nav-links" >Hoy</a>
+          <a href="/tomorrow" className="nav-links" >Mañana</a>
+          <a href="/week" className="nav-links" >Semana</a>
+          <a href="/nextWeek" className="nav-links" >Siguiente Semana</a>
         </ul>
       </nav>
       <div

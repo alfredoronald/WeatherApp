@@ -8,13 +8,6 @@ export async function getClimate() {
       throw new Error('Network response was not ok');
     }
     const data = await response.json();
- 
-    // const first = data.list[0];
-    // return {
-    //   temperature: first.main.temp,
-    //   description: first.weather[0].description,
-    //   icon: first.weather[0].icon
-    // };
     const daily = data.list.filter(item => item.dt_txt.includes("12:00:00"));
     return daily;
   } catch (error) {

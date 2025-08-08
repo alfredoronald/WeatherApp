@@ -6,6 +6,7 @@
     height: 90px;
     border-radius: 10px;
     background: linear-gradient(0.25turn, #536976, #292E49);
+    padding: 6px 16px;
 }
 .card-climate {
     display: flex;
@@ -26,8 +27,16 @@
 }
 .card-climate-number{
     display: flex;
-    font-size: 56px;
+    font-size: 50px;
     flex-direction: column;
     margin: 0;
     padding: 0;
+}
+.card-climate-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.card-climate-location img {
+  object-fit: contain;
 }

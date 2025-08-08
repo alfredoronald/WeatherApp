@@ -22,7 +22,7 @@ const Weather = () => {
   }, []);
  console.log(getWeather());
   return (
-    <div id="mint-content" className="weather-container">
+    <div  className="weather-container">
       <div className="weather-content">
         {climate && climate.list && climate.city ? (
         <CardClimate 

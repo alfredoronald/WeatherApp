@@ -9,7 +9,7 @@ interface WeatherData {
   dt_txt: string;
 }
 
-export interface CardClimateProps {
+export interface WeatherCardProps {
   weather?: WeatherData;
   city?: {
     id: number;

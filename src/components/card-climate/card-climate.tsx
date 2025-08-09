@@ -1,8 +1,8 @@
 import React from 'react';
-import {CardClimateProps} from '../../interfaces/weather.interface';
+import type {WeatherCardProps} from '../../interfaces/weather.interface';
 import './card-climate.css';
 
-export const CardClimate = ({ weather , city }:CardClimateProps) => {
+export const CardClimate = ({ weather , city }:WeatherCardProps) => {
   return (
     <div className="card-climate-container">
       <article className="card-climate">

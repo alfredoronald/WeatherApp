@@ -1,6 +1,6 @@
 import {useEffect,useState} from 'react';
 
-import {CardClimateProps} from '../../interfaces/weather.interface';
+import type {WeatherCardProps} from '../../interfaces/weather.interface';
 import Modal from '../modal/modal';
 import {getWeather} from '../../services/weather';
 import { CardClimate } from '../card-climate/card-climate';
@@ -9,7 +9,7 @@ import { CardClimate } from '../card-climate/card-climate';
 import './weather.css';
 
 const Weather = () => {
-  const [climate, setClimate] = useState<CardClimateProps[]>([]);
+  const [climate, setClimate] = useState<WeatherCardProps[]>([]);
 
   useEffect(() => {
     const fetchClimate = async () => {

@@ -38,7 +38,7 @@ const Today = ({id}:string) => {
   };
   return (
     <div id={id} className="today-container">
-      
+
         <div
         className="card-list"
         ref={scrollRef}

@@ -8,50 +8,6 @@
   overflow: hidden;
 }
 
-.modal-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border-radius: 20px;
-}
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.nav-links {
-  margin-left: 0;
-  font-weight: 600;
-  font-size: 14px;
-  color: #eff0f3;
-  cursor: pointer;
-}
-.nav-links:hover {
-  color: #ff8906;
-  text-decoration: underline;
-}
-.card-list {
-  display: flex;
-  gap: 10px;
-  width: 300px;
-  overflow-x: auto;
-  white-space: nowrap;
-  margin-top: -10px;
-  margin-left: 30px;
-  padding-bottom: 20px;
-}
-.card-list::-webkit-scrollbar {
-  display: none; /* Chrome, Safari y Opera */
-}
-
-.weather-details {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  margin: 0 40px;
-  color: #fff;
-}´
-
 .modal-button {
   background: none;
   border: none;
@@ -59,14 +15,7 @@
   padding: 0;
 }
 .modal-container.hidden {
-  max-height: 40px; /* Ajusta según el alto del botón */
+  max-height: 40px; 
   overflow: hidden;
 }
 
-.tab-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-  background-color: black;
-}

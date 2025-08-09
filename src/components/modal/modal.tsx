@@ -51,31 +51,6 @@ const Modal = () => {
           <a href="/nextWeek" className="nav-links" >Siguiente Semana</a>
         </ul>
       </nav>
-      <div
-        className="card-list"
-        ref={scrollRef}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-      >
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
-      <div className="weather-details">
-        <span>max: 26°</span>
-        <span>min: 19°</span>
-      </div>
-      <div className="weather-details">
-        <span>Viento: 16km-h</span>
-        <span>Humedad: 66%</span>
-      </div>
     </div>
   );
 };

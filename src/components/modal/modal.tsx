@@ -1,43 +1,26 @@
-import React, { useRef, useState } from 'react';
-
-import Card from '../card/card';
-
+import { useState } from 'react';
+import Today from '../../pages/today/today';
+import Tomorrow from '../../pages/tomorrow/tomorrow';
+import Week from '../../pages/week/week';
+import NextWeek from '../../pages/nextWeek/nextWeek';
 import './modal.css';
 
 const Modal = () => {
-  const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(true);
+    const [activeLink, setActiveLink] = useState("home");
+     switch (activeLink) {
+      case "home":
+        return <Today id="home" />
+      case "tomorrow":
+        return <Tomorrow id="tomorrow" />
+      case "week":
+        return <Week id="week" />
+      case "nextWeek":
+        return <NextWeek id="nextWeek" />  
+      default:
+        return null;
+     }
 
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [isDown, setIsDown] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDown(true);
-    setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
-    setScrollLeft(scrollRef.current?.scrollLeft || 0);
-    document.body.style.cursor = 'grabbing';
-  };
-
-  const handleMouseLeave = () => {
-    setIsDown(false);
-    document.body.style.cursor = 'default';
-  };
-
-  const handleMouseUp = () => {
-    setIsDown(false);
-    document.body.style.cursor = 'default';
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - (scrollRef.current?.offsetLeft || 0);
-    const walk = x - startX;
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft = scrollLeft - walk;
-    }
-  };
   return (
     <div className={`modal-container${!showModal ? ' hidden' : ''}`}>
       <div onClick={() => setShowModal(!showModal)} className="modal-button">
@@ -45,12 +28,13 @@ const Modal = () => {
       </div>
       <nav className="modal-nav">
         <ul className="nav-list">
-          <a href="/" className="nav-links" >Hoy</a>
-          <a href="/tomorrow" className="nav-links" >Mañana</a>
-          <a href="/week" className="nav-links" >Semana</a>
-          <a href="/nextWeek" className="nav-links" >Siguiente Semana</a>
+          <button onClick={()=>setActiveLink("home")} className="nav-links" >Hoy</button>
+          <button onClick={()=>setActiveLink("tomorrow")} className="nav-links" >Mañana</button>
+          <button onClick={()=>setActiveLink("week")} className="nav-links" >Semana</button>
+          <button onClick={()=>setActiveLink("nextWeek")} className="nav-links" >Siguiente Semana</button>
         </ul>
       </nav>
+      <div className="tab-content">{renderContent()}</div>
     </div>
   );
 };

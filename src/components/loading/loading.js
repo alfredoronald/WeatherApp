@@ -1,3 +1,7 @@
+
+export function loading() {
+  
+}
 const loadingScreen = document.getElementById('loading-screen');
 const mintContent = document.getElementById('mint-content');
 
@@ -11,4 +15,4 @@ setTimeout(() => {
     mintContent.style.display = 'block';
   }
   
-}, 10000); // Adjust the timeout as needed
+}, 6000); // Adjust the timeout as needed

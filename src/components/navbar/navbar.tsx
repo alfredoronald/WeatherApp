@@ -8,7 +8,7 @@ import type { ForecastData } from '../../interfaces/weather.interface';
 import './navbar.css';
 const Navbar = () => {
   const [weather, setWeather] = useState<ForecastData | null>(null);
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState<'home'|'tomorrow'|'week'|'nextWeek'>('home');
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -19,63 +19,69 @@ const Navbar = () => {
     };
     fetchWeather();
   }, []);
-  const renderContent = () => {
-    switch (activeLink) {
-      case 'home':
-        return (
-          <div>
-            {weather && weather.list ? (
-              <Today weather={weather.list[0]} />
-            ) : (
-              <p>Cargando clima...</p>
-            )}
-          </div>
-        );
-      case 'tomorrow':
-        return (
-          <div>
-            {weather && weather.list && weather.city ? (
-              <Today weather={weather.list[1]} />
-            ) : (
-              <p>Cargando clima...</p>
-            )}
-          </div>
-        );
-      case 'week':
-        return <Week />;
-      case 'nextWeek':
-        return <NextWeek />;
-      default:
-        return null;
-    }
-  };
+
   return (
     <div className="navbar-container">
       <nav className="modal-nav">
         <ul className="nav-list">
           <li>
-            <a onClick={() => setActiveLink('home')} className="nav-links">
+            <a
+              href="home"
+              className={`nav-links ${activeLink === 'home' ? 'active' : ''}`}
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveLink('home');
+              }}
+            >
               Hoy
             </a>
           </li>
           <li>
-            <a onClick={() => setActiveLink('tomorrow')} className="nav-links">
+            <a
+              href="tomorrow"
+              className={`nav-links ${activeLink === 'tomorrow' ? 'active' : ''}`}
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveLink('tomorrow');
+              }}
+            >
               Mañana
             </a>
           </li>
           <li>
-            <a onClick={() => setActiveLink('week')} className="nav-links">
+            <a
+              href="week"
+              className={`nav-links ${activeLink === 'week' ? 'active' : ''}`}
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveLink('week');
+              }}
+            >
               Semana
             </a>
           </li>
           <li>
-            <a onClick={() => setActiveLink('nextWeek')} className="nav-links">
+            <a
+              href="nextWeek"
+              className={`nav-links ${activeLink === 'nextWeek' ? 'active' : ''}`}
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveLink('nextWeek');
+              }}
+            >
               Siguiente Semana
             </a>
           </li>
         </ul>
       </nav>
-      <div className="tab-content">{renderContent()}</div>
+      <div className="tab-content"> {activeLink === 'home' && (
+          weather?.list ? <Today weather={weather.list[0]} /> : <p>Cargando clima...</p>
+        )}
+        {activeLink === 'tomorrow' && (
+          weather?.list && weather.city ? <Today weather={weather.list[1]} /> : <p>Cargando clima...</p>
+        )}
+        {activeLink === 'week' && <Week />}
+        {activeLink === 'nextWeek' && <NextWeek />}</div>
     </div>
   );
 };

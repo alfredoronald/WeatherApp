@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react';
-import InitialPage from './components/init/init';
+import InitialPage from './pages/init/init';
 import Weather from './components/weather/weather';
 import './App.css';
 
@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowWeather(true);
-    }, 6000);
+    }, 4000);
     return () => clearTimeout(timer);
   }, []);
   return ( 

@@ -1,4 +1,6 @@
 import type {WeatherCardProps} from '../../interfaces/weather.interface';
+import LocationIcon from '../../assets/icons/location.svg';
+
 import './card-climate.css';
 
 export const CardClimate = ({ weather , city }:WeatherCardProps) => {
@@ -10,7 +12,7 @@ export const CardClimate = ({ weather , city }:WeatherCardProps) => {
       <span className="card-climate-number">{temperature}°</span>
       <div className="card-climate-info">
         <span>Jueves,{weather.dt_txt}</span>
-        <span className="card-climate-location"><img src="/src/assets/icons/location.svg" alt="location icon" />{city?.name}</span>
+        <span className="card-climate-location"><img src={LocationIcon} alt="location icon" />{city?.name}</span>
       </div>
       </article>
     </div>

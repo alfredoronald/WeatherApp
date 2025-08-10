@@ -1,4 +1,4 @@
-
+import IntroImage from '../../assets/backgrounds/intro.svg';
 import './init.css';
 
 const InitialPage = () => {
@@ -7,7 +7,7 @@ const InitialPage = () => {
     <div className="container-intro">
       <h1>Weather App</h1>
       <img
-        src="/src/assets/backgrounds/intro.svg"
+        src={IntroImage}
         alt="Imagen de Inicio"
       />
     </div>

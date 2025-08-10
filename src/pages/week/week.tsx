@@ -6,43 +6,43 @@ const Week = () => {
       <ul className="week-list">
         <div className="week-info">
           <span>Lunes</span>
-          <img src="" alt="icon" />
-          <span>Hoy</span>  
+          <img src="/src/assets/icons/sun.svg" alt="icon" />
+          <span>27</span>  
           <span>18</span>  
         </div>
         <div className="week-info">
           <span>Martes</span>
-          <img src="" alt="icon" />
+          <img src="/src/assets/icons/sun.svg" alt="icon" />
           <span>27</span> 
           <span>18</span>   
         </div>
         <div className="week-info">
           <span>Miercoles</span>
-          <img src="" alt="icon" />
+          <img src="/src/assets/icons/sun.svg" alt="icon" />
           <span>27</span> 
           <span>18</span>   
         </div>
         <div className="week-info">
           <span>Jueves</span>
-          <img src="" alt="icon" />
+          <img src="/src/assets/icons/sun.svg" alt="icon" />
           <span>27</span>
           <span>18</span>    
         </div>
         <div className="week-info">
           <span>Viernes</span>
-          <img src="" alt="icon" />
+          <img src="/src/assets/icons/sun.svg" alt="icon" />
           <span>27</span> 
           <span>18</span>   
         </div>
         <div className="week-info">
           <span>Sabado</span>
-          <img src="" alt="icon" />
+          <img src="/src/assets/icons/sun.svg" alt="icon" />
           <span>27</span> 
           <span>18</span>   
         </div>
         <div className="week-info">
           <span>Domingo</span>
-          <img src="" alt="icon" />
+          <img src="/src/assets/icons/sun.svg" alt="icon" />
           <span>27</span> 
           <span>18</span>   
         </div>

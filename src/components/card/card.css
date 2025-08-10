@@ -2,17 +2,22 @@
   display: flex;
   height:110px;
   width: 70px;
-  padding: 0px 12px;
+  padding: 6px 14px 2px 14px;
   justify-content: center;
   background-color: #393939;
   border-radius: 58px;  
   flex-direction: column;
-  row-gap: 0px;
+  row-gap: -2 px;
 }
 .card-time{
   font-size: 12px;
   color: #fff;
-  text-align: center;
+  
+}
+.card-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
 }
 .card-temp{
   color: #fff;

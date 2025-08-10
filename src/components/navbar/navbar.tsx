@@ -10,13 +10,13 @@ const Navbar = () => {
   const renderContent = () => {
     switch (activeLink) {
       case "home":
-        return <Today id="home" />;
+        return <Today  />;
       case "tomorrow":
-        return <Tomorrow id="tomorrow" />;
+        return <Tomorrow />;
       case "week":
-        return <Week id="week" />;
+        return <Week />;
       case "nextWeek":
-        return <NextWeek id="nextWeek" />;
+        return <NextWeek/>;
       default:
         return null;
     }

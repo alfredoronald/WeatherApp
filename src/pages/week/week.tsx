@@ -1,18 +1,52 @@
-import React from 'react'
+import './week.css';
 
-const Week = ({id}:string) => {
+const Week = () => {
   return (
-    <div>
-
-      <div id={id}>Week</div>
-      <nav className="modal-nav">
-        <ul className="nav-list">
-          <button onClick={()=>setActiveLink("home")} className="nav-links" >Hoy</button>
-          <button onClick={()=>setActiveLink("tomorrow")} className="nav-links" >Mañana</button>
-          <button onClick={()=>setActiveLink("week")} className="nav-links" >Semana</button>
-          <button onClick={()=>setActiveLink("nextWeek")} className="nav-links" >Siguiente Semana</button>
-        </ul>
-      </nav>
+    <div className="week-container">
+      <ul className="week-list">
+        <div className="week-info">
+          <span>Lunes</span>
+          <img src="" alt="icon" />
+          <span>Hoy</span>  
+          <span>18</span>  
+        </div>
+        <div className="week-info">
+          <span>Martes</span>
+          <img src="" alt="icon" />
+          <span>27</span> 
+          <span>18</span>   
+        </div>
+        <div className="week-info">
+          <span>Miercoles</span>
+          <img src="" alt="icon" />
+          <span>27</span> 
+          <span>18</span>   
+        </div>
+        <div className="week-info">
+          <span>Jueves</span>
+          <img src="" alt="icon" />
+          <span>27</span>
+          <span>18</span>    
+        </div>
+        <div className="week-info">
+          <span>Viernes</span>
+          <img src="" alt="icon" />
+          <span>27</span> 
+          <span>18</span>   
+        </div>
+        <div className="week-info">
+          <span>Sabado</span>
+          <img src="" alt="icon" />
+          <span>27</span> 
+          <span>18</span>   
+        </div>
+        <div className="week-info">
+          <span>Domingo</span>
+          <img src="" alt="icon" />
+          <span>27</span> 
+          <span>18</span>   
+        </div>
+      </ul>
     </div>
   )
 }

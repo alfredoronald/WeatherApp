@@ -12,4 +12,4 @@ setTimeout(() => {
     mintContent.style.display = 'block';
   }
   
-}, 5000); 
+}, 4000); 

@@ -2,7 +2,7 @@ import {useRef, useState} from 'react'
 import Card from '../../components/card/card';
 
 import './today.css'
-const Today = ({id}:string) => {
+const Today = () => {
 
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -37,8 +37,7 @@ const Today = ({id}:string) => {
     }
   };
   return (
-    <div id={id} className="today-container">
-
+    <div  className="today-container">
         <div
         className="card-list"
         ref={scrollRef}

@@ -1,0 +1,17 @@
+.week-container{
+    margin: 0;
+}
+
+.week-list{
+    display: flex;
+    flex-direction: column;
+    color : #fff;
+    padding: 0 40px;
+    gap: 10px;
+}
+
+.week-info{
+    display: flex;
+    justify-content: space-between;
+
+}

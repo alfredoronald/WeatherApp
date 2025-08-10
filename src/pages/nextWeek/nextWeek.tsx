@@ -1,8 +1,8 @@
 import React from 'react'
 
-const NextWeek = ({id}:string) => {
+const NextWeek = () => {
   return (
-    <div id={id}>hola mundo</div>
+    <div >hola mundo</div>
   )
 }
 

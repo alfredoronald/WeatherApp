@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react'
 import Today from '../../pages/today/today';
-import Tomorrow from '../../pages/tomorrow/tomorrow';
 import Week from '../../pages/week/week';
 import NextWeek from '../../pages/nextWeek/nextWeek';
 import {getWeather} from '../../services/weather';

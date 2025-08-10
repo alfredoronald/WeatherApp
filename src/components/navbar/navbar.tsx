@@ -1,18 +1,37 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Today from '../../pages/today/today';
 import Tomorrow from '../../pages/tomorrow/tomorrow';
 import Week from '../../pages/week/week';
 import NextWeek from '../../pages/nextWeek/nextWeek';
+import {getWeather} from '../../services/weather';
+import type {WeatherCardProps} from '../../interfaces/weather.interface';
+
 import './navbar.css';
 const Navbar = () => {
-    const [activeLink, setActiveLink] = useState("home");
+  const [weather, setWeather] = useState<WeatherCardProps[]>([]);
+  const [activeLink, setActiveLink] = useState("home");
 
+  useEffect(()=> {
+    const fetchWeather = async () => {
+      const data = await getWeather();
+      if (data) {
+        setWeather(data);
+      }
+    };
+    fetchWeather();
+  },[]);
   const renderContent = () => {
     switch (activeLink) {
       case "home":
-        return <Today  />;
+        return <div>
+          {weather && weather.list && weather.city ? (
+          <Today weather={weather.list[0]}/>):(<p>Cargando clima...</p>)}
+        </div>
       case "tomorrow":
-        return <Tomorrow />;
+        return <div>
+          {weather && weather.list && weather.city ? (
+          <Today weather={weather.list[1]}/>):(<p>Cargando clima...</p>)}
+        </div>;
       case "week":
         return <Week />;
       case "nextWeek":

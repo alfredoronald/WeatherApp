@@ -10,7 +10,6 @@ import './weather.css';
 
 const Weather = () => {
   const [climate, setClimate] = useState<WeatherCardProps[]>([]);
-
   useEffect(() => {
     const fetchClimate = async () => {
       const data = await getWeather();

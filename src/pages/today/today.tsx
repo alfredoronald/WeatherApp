@@ -2,7 +2,7 @@ import {useRef, useState} from 'react'
 import Card from '../../components/card/card';
 
 import './today.css'
-const Today = () => {
+const Today = ({ weather}:WeatherCardProps) => {
 
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -56,12 +56,12 @@ const Today = () => {
         <Card />
       </div>
       <div className="weather-details">
-        <span>max: 26°</span>
-        <span>min: 19°</span>
+        <span>max: {Math.round(weather.main.temp_max || "30")}°</span>
+        <span>min: {Math.round(weather.main.temp_min)}°</span>
       </div>
       <div className="weather-details">
-        <span>Viento: 16km-h</span>
-        <span>Humedad: 66%</span>
+        <span>Presion: {Math.round(weather.main.pressure)}</span>
+        <span>Humedad: {Math.round(weather.main.humidity)}</span>
       </div>
 
     </div>

@@ -1,8 +1,5 @@
-
 const NextWeek = () => {
-  return (
-    <div >hola mundo</div>
-  )
-}
+  return <div>hola mundo</div>;
+};
 
-export default NextWeek
+export default NextWeek;

@@ -6,7 +6,7 @@ export interface WeatherData {
     humidity: number;
     pressure: number;
   };
-  weather: {  
+  weather: {
     description: string;
     icon: string;
   }[];
@@ -17,15 +17,13 @@ export interface CityData {
   id: number;
   name: string;
   country: string;
-  population: number; 
+  population: number;
 }
-
 
 export interface WeatherCardProps {
   weather: WeatherData;
   city?: CityData;
 }
-
 
 export interface ForecastData {
   list: WeatherData[];

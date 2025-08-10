@@ -16,7 +16,6 @@
 }
 .modal-container.hidden {
   background-color: transparent;
-  max-height: 20px; 
+  max-height: 20px;
   overflow: hidden;
 }
-

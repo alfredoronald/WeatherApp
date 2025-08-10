@@ -1,16 +1,14 @@
-import {useRef, useState} from 'react'
-import type {WeatherCardProps} from '../../interfaces/weather.interface';
+import { useRef, useState } from 'react';
+import type { WeatherCardProps } from '../../interfaces/weather.interface';
 import Card from '../../components/card/card';
 
-import './today.css'
-const Today = ({ weather}:WeatherCardProps) => {
-
-
+import './today.css';
+const Today = ({ weather }: WeatherCardProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  
+
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDown(true);
     setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
@@ -38,8 +36,8 @@ const Today = ({ weather}:WeatherCardProps) => {
     }
   };
   return (
-    <div  className="today-container">
-        <div
+    <div className="today-container">
+      <div
         className="card-list"
         ref={scrollRef}
         onMouseDown={handleMouseDown}
@@ -64,9 +62,8 @@ const Today = ({ weather}:WeatherCardProps) => {
         <span>Presion: {Math.round(weather.main.pressure)}</span>
         <span>Humedad: {Math.round(weather.main.humidity)}</span>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Today
+export default Today;

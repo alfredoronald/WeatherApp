@@ -1,5 +1,4 @@
-.navbar-container{
-
+.navbar-container {
 }
 .modal-nav {
   display: flex;
@@ -21,7 +20,7 @@
   cursor: pointer;
 }
 .nav-links:hover {
-    color: orange;
+  color: orange;
   text-decoration: underline;
 }
 .card-list {

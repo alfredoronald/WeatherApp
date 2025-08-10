@@ -1,4 +1,5 @@
 import {useRef, useState} from 'react'
+import type {WeatherCardProps} from '../../interfaces/weather.interface';
 import Card from '../../components/card/card';
 
 import './today.css'
@@ -56,7 +57,7 @@ const Today = ({ weather}:WeatherCardProps) => {
         <Card />
       </div>
       <div className="weather-details">
-        <span>max: {Math.round(weather.main.temp_max || "30")}°</span>
+        <span>max: {Math.round(weather.main.temp_max)}°</span>
         <span>min: {Math.round(weather.main.temp_min)}°</span>
       </div>
       <div className="weather-details">

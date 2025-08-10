@@ -1,4 +1,4 @@
-interface WeatherData {
+export interface WeatherData {
   main: {
     temp: number;
     temp_min: number;
@@ -13,12 +13,21 @@ interface WeatherData {
   dt_txt: string;
 }
 
+export interface CityData {
+  id: number;
+  name: string;
+  country: string;
+  population: number; 
+}
+
+
 export interface WeatherCardProps {
-  weather?: WeatherData;
-  city?: {
-    id: number;
-    name: string;
-    country: string;
-    pupulation: number;
-  }
+  weather: WeatherData;
+  city?: CityData;
+}
+
+
+export interface ForecastData {
+  list: WeatherData[];
+  city: CityData;
 }

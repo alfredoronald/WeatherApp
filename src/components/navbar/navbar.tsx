@@ -3,11 +3,11 @@ import Today from '../../pages/today/today';
 import Week from '../../pages/week/week';
 import NextWeek from '../../pages/nextWeek/nextWeek';
 import {getWeather} from '../../services/weather';
-import type {WeatherCardProps} from '../../interfaces/weather.interface';
+import type {ForecastData} from '../../interfaces/weather.interface';
 
 import './navbar.css';
 const Navbar = () => {
-  const [weather, setWeather] = useState<WeatherCardProps[]>([]);
+  const [weather, setWeather] = useState<ForecastData|null>(null);
   const [activeLink, setActiveLink] = useState("home");
 
   useEffect(()=> {
@@ -23,7 +23,7 @@ const Navbar = () => {
     switch (activeLink) {
       case "home":
         return <div>
-          {weather && weather.list && weather.city ? (
+          {weather && weather.list ? (
           <Today weather={weather.list[0]}/>):(<p>Cargando clima...</p>)}
         </div>
       case "tomorrow":

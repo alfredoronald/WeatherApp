@@ -3,14 +3,18 @@
 }
 
 .week-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 50px 72px 72px;
   flex-direction: column;
   color: #fff;
   padding: 0 40px;
   gap: 10px;
 }
-
+.week-list span {
+  text-align: start;
+}
 .week-info {
   display: flex;
   justify-content: space-between;
 }
+

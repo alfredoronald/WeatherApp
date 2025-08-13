@@ -1,4 +1,5 @@
 export interface WeatherData {
+  dt: number;
   main: {
     temp: number;
     temp_min: number;
